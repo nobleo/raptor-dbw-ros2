@@ -15,7 +15,7 @@ jobs:
         ros_distribution:
           - humble
           - jazzy
-          - rolling
+          - lyrical
         include:
           # Humble Hawksbill (May 2022 - May 2027)
           - docker_image: rostooling/setup-ros-docker:ubuntu-jammy-ros-humble-ros-base-latest
@@ -25,9 +25,9 @@ jobs:
           - docker_image: rostooling/setup-ros-docker:ubuntu-noble-ros-jazzy-ros-base-latest
             ros_distribution: jazzy
             ros_version: 2
-          # Rolling Ridley  (June 2020 - Present)
-          - docker_image: rostooling/setup-ros-docker:ubuntu-noble-ros-rolling-ros-base-latest
-            ros_distribution: rolling
+          # Lyrical Ridley  (June 2020 - Present)
+          - docker_image: rostooling/setup-ros-docker:ubuntu-noble-ros-lyrical-ros-base-latest
+            ros_distribution: lyrical
             ros_version: 2
     container:
       image: ${{ matrix.docker_image }}
